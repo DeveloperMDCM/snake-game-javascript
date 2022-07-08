@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/favicon.png" class="favicon">
+    <title>Snake</title>
+</head>
+<body>
+  
+    <div class="container">
+        <div class="home_game" id="home_game">
+            <h1 style="color: #fff; text-align: center; font-size: 5rem;">Snake Game</h1>
+        <img  src="img/snake1.png" class="img-home" >
+         
+        <!-- Open  Modal -->
+        <button id="myBtn">Jugar</button></div>
+        <!--  Modal -->
+        <div id="myModal" class="modal" >
+            <!-- Modal content -->
+            <div class="modal-content" >
+                <div onclick="gameStop()"><span class="close">&times;</span></div>            
+                <div id="gameContainer">
+                    <div class="data">
+                        <div class="board-head">
+                            <img src="img/apple4.png" id="apple_board" alt="" width="40" >
+                            <div id="scoreText">0</div>
+                        </div>
+                        <div class="board-head">
+                            <img src="img/heart.png"
+                                alt="" width="40">
+                            <div id="livesText">3</div>
+                        </div>
+                        <div class="board-head">
+                            <img src="img/hightscore.png" alt="" width="40">
+                            <div id="hightscoreText">0</div>
+                        </div>
+                        <div class="board-head">
+                            <button id="mute" class="mute"  onclick="toggleMute() "><i class="fa-solid fa-volume-high"></i></button>
+                        </div>
+                        <div class="board-head">
+                            <div onclick="gameStop()"><span class="close2"><i class="fa-solid fa-hand"></i></span></div>
+                        </div>
+                        <div class="menu">
+                            <div class="menu_item" id="menu_item">
+                                <h1 class="datos" id="scoreMenu">0</h1>
+                                <h1 class="datos2" id="hscoreMenu">0</h1>
+                                <img class="img-menu" id="apple_menu" src="img/apple4.png" width="70">
+                                <img class="img-menu" src="img/hightscore.png" width="70">
+                                <img class="snake" src="img/snake1.png" id="snake_menu" width="250" >
+                                <img class="ground" src="img/board1.png" id="ground_menu"  alt="">
+                            </div>
+                            <div class="menu_item2" id="menu_item2">
+                                <div><h1> <i onclick="goBack()"  class="fa-solid fa-arrow-left configuracion"></i>Configuración</h1></div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img id="board1" src="img/board1.png" alt=""    width="30">
+                                    <img id="board2" src="img/board2.png" alt=""    width="30">
+                                    <img id="board3" src="img/board3.png" alt=""    width="30">
+                                    <img id="board4" src="img/board4.png" alt=""    width="30">
+                                    <img id="board5" src="img/board5.png" alt=""    width="30">
+                                    <img id="board6" src="img/board6.png" alt=""    width="30">
+                                    <img id="board7" src="img/board7.png" alt=""    width="30">
+                                    <img id="board8" src="img/board8.png" alt=""    width="30">
+                                </div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img id="apple1" src="img/apple1.png"  alt=""  width="30">
+                                    <img id="apple2" src="img/apple2.png"  alt=""  width="30">
+                                    <img id="apple3" src="img/apple3.png"  alt=""  width="30">
+                                    <img id="apple4" src="img/apple4.png"  alt=""  width="30">
+                                    <img id="apple5" src="img/apple5.png"  alt=""  width="30">
+                                    <img id="apple6" src="img/apple6.png"  alt=""  width="30">
+                                    <img id="apple7" src="img/apple7.png"  alt=""  width="30">
+                                    <img id="apple8" src="img/apple8.png"  alt=""  width="30">
+                                </div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img src="img/body1.png" id="body1"  alt=""  width="30">
+                                    <img src="img/body2.png" id="body2" alt=""  width="30">
+                                    <img src="img/body3.png" id="body3" alt=""  width="30">
+                                    <img src="img/body4.png" id="body4" alt=""  width="30">
+                                    <img src="img/body5.png" id="body5" alt=""  width="30">
+                                    <img src="img/body6.png" id="body6" alt=""  width="30">
+                                    <img src="img/body7.png" id="body7" alt=""  width="30">
+                                    <img src="img/body8.png" id="body8" alt=""  width="30">
+                                </div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img src="img/game1.png" id="game1" alt=""  width="30">
+                                    <img src="img/game2.png" id="game2" alt=""  width="30">
+                                    <img src="img/game3.png" id="game3" alt=""  width="30">
+                                    <img src="img/game4.gif" id="game4" alt=""  width="30">
+                                    <img src="img/game5.webp"id="game5" alt=""  width="30">
+                                    <img src="img/game6.png" id="game6" alt=""  width="30">
+                                    <img src="img/game7.png" id="game7" alt=""  width="30">
+                                    <img src="img/game8.png" id="game8" alt=""  width="30">
+                                </div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img src="img/border1.png" id="border1" alt=""  width="30">
+                                    <img src="img/border2.png" id="border2" alt=""  width="30">
+                                    <img src="img/border3.png" id="border3" alt=""  width="30">
+                                    <img src="img/border4.png" id="border4" alt=""  width="30">
+                                    <img src="img/border5.png" id="border5" alt=""  width="30">
+                                    <img src="img/border6.png" id="border6" alt=""  width="30">
+                                    <img src="img/border7.png" id="border7" alt=""  width="30">
+                                    <img src="img/border8.png" id="border8" alt=""  width="30">
+                                </div>
+                                <hr>
+                                <div class="fondo_menu">
+                                    <img src="img/ramdon.png" id="random1" alt="" width="70">                            
+                                    <img src="img/IABOT.png" id="random1" alt="" width="70">                            
+                                </div>
+                            </div>
+                            <button id="resetBtn" ><i class="fa-solid fa-play"></i> Jugar</button>
+                            <button id="startBtn" onclick="openMenu()"><i class="fa-solid fa-gear"></i></button>
+                            
+
+                        </div>
+                    </div>
+                    <canvas id="gameBoard" width="500" height="500"></canvas>
+                    <input type="text" placeholder="foo" />
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

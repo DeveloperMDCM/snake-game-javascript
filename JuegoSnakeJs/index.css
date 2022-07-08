@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+canvas {
+  background-image: url("img/board1.png");
+  background-size: cover;
+}
+
+.menu_item2 {
+  color: #fff;
+  position: absolute;
+  background-color: #4dc1f9;
+  width: 320px;
+  height: 340px;
+  top: 10px;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  display: none;
+}
+
+:root
+{
+  --items_menu: #000;
+}
+
+.select_item1{
+
+border: 3px dashed var(--items_menu);
+}
+.select_item2{
+ 
+border: 3px dashed var(--items_menu);
+}
+.select_item3{
+ 
+border: 3px dashed var(--items_menu);
+}
+.select_item4{
+border: 3px dashed var(--items_menu);
+}
+.select_item5{
+
+border: 3px dashed var(--items_menu);
+}
+.container_exit:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.configuracion {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.fondo_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fondo_menu img {
+  margin: 5px;
+  animation: fondos 2s ease-in infinite;
+}
+.fondo_menu img:hover
+{
+filter: drop-shadow( 0 0 4px rgb(235, 8, 8) ) ;
+}
+@keyframes fondos {
+  0%, 100% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.modal {
+  display: none;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.home_game {
+  position: relative;
+  display: inline-block;
+}
+
+.img-home
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#myBtn {
+  position: relative;
+  margin: 20px 0;
+  top: 0;
+  left: 0;
+  transform: translate(50%);
+  width: 50%;
+  height: 50px;
+  background-color: #0b66ce;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #0f100f;
+  margin: auto;
+  width: 700px;
+}
+
+.botones_setting
+{
+  position: absolute;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.close {
+  float: right;
+  margin-right: 20px;
+  font-size: 58px;
+  font-weight: bold;
+  color: #f00;
+}
+.close2 {
+cursor: pointer;
+  color: #fff;
+}
+
+.close2:hover ,.close:hover,
+.close:focus {
+  color: #0f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#gameContainer {
+  text-align: center;
+  margin: 20px;
+  
+}
+
+.mute {
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+.fa-volume-xmark {
+  color: #f00;
+}
+
+#gameBoard {
+  border: 15px solid #3f3f3f;
+}
+
+#scoreText,
+#livesText,
+#hightscoreText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: #fff;
+}
+
+.board-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50%);
+}
+
+#resetBtn,
+#startBtn {
+  font-family: "Permanent Marker", cursive;
+  font-size: 22px;
+  width: 140px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  color: #fff;
+  background-color: #0b66ce;
+  display: inline-block;
+}
+
+#resetBtn {
+  width: 70%;
+}
+
+#startBtn {
+  width: 20%;
+}
+
+#resetBtn:hover,
+#startBtn:hover {
+  background-color: #07468f;
+  color: #fff;
+}
+
+.data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  width: 340px;
+}
+
+.menu_item {
+  align-items: center;
+  background-color: #4dc1f9;
+  height: 340px;
+  width: 320px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  filter: drop-shadow( 0 0 10px rgb(0, 0, 0) ) ;
+}
+
+i {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.img-menu {
+  position: relative;
+  top: 0;
+  margin: 0 30px;
+}
+
+.ground {
+  position: relative;
+  top: 95px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.snake {
+  position: relative;
+  top: 100px;
+  right: 40px;
+}
+
+.datos {
+  position: relative;
+  top: 140px;
+  right: 0;
+  left: 68px;
+}
+
+.datos2 {
+  position: relative;
+  top: 105px;
+  right: 65px;
+}
+
+.datos,
+.datos2 {
+  font-weight: bold;
+  color: #fff;
+}
