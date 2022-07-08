@@ -1,5 +1,5 @@
 # snake-game-javascript
-# <center> js</center>
+# js
 # css
 # html
 # jquery
