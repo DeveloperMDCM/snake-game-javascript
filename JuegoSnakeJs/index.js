@@ -305,7 +305,7 @@ const moveSnake = () => {
     scoreMenu.textContent = score;
     hscoreMenu.textContent = score;
     //Guarda y suma el record cuando el puntaje sea mayor que el record
-    if (score < record) record = score;
+    if (score > record) record = score;
     localStorage.setItem("hightscoreText", record);
     document.getElementById("hightscoreText").innerHTML = record;
     createFood();
