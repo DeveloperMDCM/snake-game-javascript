@@ -1,6 +1,0 @@
-humpy
-pandas
-flask
-joblib
-sklearn
-gunicorn
